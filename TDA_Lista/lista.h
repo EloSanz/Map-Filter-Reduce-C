@@ -174,7 +174,7 @@ void reduce/*!const*/(tLista* pl, tAcumular acumular, void* destino)
     }
     //*pl = NULL;
 }
-void autoReduce(const tLista* pl, tAcumular acumular, void* destino)
+void autoReduce(const tLista* pl, tAcumular acumular, void* destino)//no destruye la lista
 {
     while (*pl)
     {
