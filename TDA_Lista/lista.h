@@ -122,7 +122,7 @@ void autoFilter(tLista* pl, tFiltro filtro)
 
 typedef void(*tAccionMap)(void*);
 /*Map - AutoMap*/
-int map(tLista* nueva, const tLista* pl, tAccionMap accion)
+int map(tLista* nueva, const tLista* pl, tAccionMap accion){
 {
     if(!accion)
         return 0;
