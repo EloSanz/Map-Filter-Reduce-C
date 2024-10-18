@@ -123,12 +123,11 @@ void autoFilter(tLista* pl, tFiltro filtro)
 typedef void(*tAccionMap)(void*);
 /*Map - AutoMap*/
 int map(tLista* nueva, const tLista* pl, tAccionMap accion){
-{
+    
     if(!accion)
         return 0;
     void* aux = NULL; 
-    if(*nueva)
-        vaciarLista(nueva);
+    if(*nueva) vaciarLista(nueva);
 
     while (*pl)
     {
@@ -151,8 +150,7 @@ int map(tLista* nueva, const tLista* pl, tAccionMap accion){
         free(aux);
     return 1;
 }
-void autoMap(tLista* pl, tAccionMap accion)
-{
+void autoMap(tLista* pl, tAccionMap accion){
     while (*pl)
     {
         accion((*pl)->info);
@@ -162,8 +160,7 @@ void autoMap(tLista* pl, tAccionMap accion)
 
 typedef void(*tAcumular)(void*, const void*);
 /*Reduce - AutoReduce*/
-void reduce/*!const*/(tLista* pl, tAcumular acumular, void* destino)
-{
+void reduce/*!const*/(tLista* pl, tAcumular acumular, void* destino){
     while (*pl)
     {
         tNodo* elim = *pl;
